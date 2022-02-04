@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --color-dark:#2C3333;
+    --color-light:#FBF8F1;
+    --nav-height: 3rem;
+    --font-logo: 'Montserrat', sans-serif;
+    --font-links: 'Poppins', sans-serif;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+/* ------mobile-nav styling------ */
+
+.nav-heading{
+    /* height: var(--nav-height); */
+    width: 100vw;
+    max-width: 1200px;
+    /* background-color: yellow; */
+    
+}
+.nav-logo-wrapper{
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.nav-logo{
+    font-size: 1.4rem;
+    font-family: var(--font-logo);
+    color: var(--color-light);
+}
+.hamburger{
+    font-size: 1.2rem;
+    color: var(--color-light);
+    cursor: pointer;
+    border: 1px solid var(--color-light);
+    border-radius: 3px;
+    padding: 0.2rem;
+}
+
+
+
+.nav-links{
+    
+    padding-top: 1rem;
+    background-color:var(--color-dark);
+    width:270px;
+    height: 100vh;;
+    position: absolute;
+    top: 0%;
+    left: -200%;
+    transition:  0.5s ease;
+    
+}
+.nav-links-active{
+    left: 0%;
+}
+nav{
+    
+    background-color:var(--color-dark);
+    position: relative;
+}
+.nav-links ul{
+    text-align: center;
+}
+.nav-links ul li{
+    
+    margin: 2.5rem 0;
+}
+.nav-links ul li a{
+    color: var(--color-light);
+    font-family: var(--font-logo);
+    font-weight: 400;
+    transition: all 0.3s ease;
+    
+}
+.nav-links ul li a:hover{
+    border-bottom: 1px solid var(--color-light);
+    font-size: 1.3rem;
+    
+}
+/* -----Desktop-navbar------- */
+@media screen and (min-width:699px) {
+    .hamburger{
+        display: none;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .nav-links{
+        position: relative;
+        left: 0%;
+        height: auto;
+        width: auto;
+        padding: 0%;
+        transition: none;
+        transition-delay: 0s;
+        
+        
+    }
+    .nav-links ul{
+        display: flex;
+        align-items: center;
+    }
+    .nav-links ul li{
+        margin: 0.8rem;
+    }
+    .nav-heading{
+        margin: 0 auto;
+    }
+    .nav-links ul li a.btn{
+        padding: 0.3rem 0.8rem;
+        background-color: var(--color-light);
+        border-radius: 10px;
+        color: var(--color-dark);
+    }
+    .nav-links ul li a.btn:hover{
+        font-size: 1rem;
+    }
+}
